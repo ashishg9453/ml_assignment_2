@@ -1,0 +1,8 @@
+streamlit - runs web app.
+scikit-learn - machine learning models (Logistic Regression, Decision Tree, kNN, Naive Bayes, Random Forest)
+xgboost - XGBoost model
+numpy - numerical operations
+pandas - dataset handling
+matplotlib - plotting graphs
+seaborn - confusion matrix visualization
+joblib - - saving and loading .pkl model files
