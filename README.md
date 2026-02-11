@@ -38,12 +38,13 @@ For each model, the following metrics are calculated:
 | Random Forest       | 0.964912 | 0.995087| 0.958904  | 0.985915 | 0.972222 | 0.925285 |
 | XGBoost             | 0.956140 | 0.990829| 0.958333  | 0.971831 | 0.965035 | 0.906379 |
 ## Observations
-- Logistic Regression: …  
-- Decision Tree: …  
-- kNN: …  
-- Naive Bayes: …  
-- Random Forest: …  
-- XGBoost: …  
+
+- Logistic Regression: Achieved the highest AUC score, showing strong separability between classes.  
+- Decision Tree: Accuracy was lower compared to other models, likely due to overfitting.  
+- kNN: Balanced precision and recall, but slightly weaker MCC than ensemble methods.  
+- Naive Bayes: Very high AUC and recall, making it effective for detecting positive cases.  
+- Random Forest: Consistently strong across all metrics, robust performance with low variance.  
+- XGBoost: Competitive results, slightly lower MCC than Random Forest but still reliable.  
 
 ## Streamlit App
 The app allows:
