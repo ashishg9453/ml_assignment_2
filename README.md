@@ -2,13 +2,16 @@
 
 ## Problem Statement
 This repository contains my submission for Machine Learning Assignment 2.  
-The task is to implement six classification models on a dataset, evaluate them, and deploy an interactive Streamlit app.
+The objective is to implement six classification models on a chosen dataset, evaluate them using multiple metrics, and deploy an interactive Streamlit app.  
+The assignment demonstrates end-to-end ML workflow: modeling, evaluation, UI design, and deployment.
 
 ## Dataset Description
 Dataset: Breast Cancer (UCI)  
 - 569 instances  
 - 30 features  
-- Binary classification (Malignant vs Benign)
+- Binary classification (Malignant vs Benign)  
+
+This dataset is widely used for benchmarking classification models and meets the assignment requirement of ≥12 features and ≥500 instances.
 
 ## Models Implemented
 1. Logistic Regression  
@@ -16,7 +19,7 @@ Dataset: Breast Cancer (UCI)
 3. K-Nearest Neighbor Classifier  
 4. Naive Bayes Classifier  
 5. Random Forest (Ensemble)  
-6. XGBoost (Ensemble)
+6. XGBoost (Ensemble)  
 
 ## Evaluation Metrics
 For each model, the following metrics are calculated:
@@ -27,24 +30,24 @@ For each model, the following metrics are calculated:
 - F1 Score  
 - Matthews Correlation Coefficient (MCC)
 
-### Comparison Table (to be filled after running Colab)
+### Comparison Table
 
 | Model               | Accuracy |   AUC   | Precision | Recall |   F1    |   MCC   |
 |---------------------|----------|---------|-----------|--------|---------|---------|
-| Logistic Regression | 0.973684 | 0.997380| 0.972222  | 0.985915 | 0.979021 | 0.943898 |
-| Decision Tree       | 0.938596 | 0.932362| 0.944444  | 0.957746 | 0.951049 | 0.868860 |
-| kNN                 | 0.947368 | 0.981985| 0.957746  | 0.957746 | 0.957746 | 0.887979 |
-| Naive Bayes         | 0.964912 | 0.997380| 0.958904  | 0.985915 | 0.972222 | 0.925285 |
-| Random Forest       | 0.964912 | 0.995087| 0.958904  | 0.985915 | 0.972222 | 0.925285 |
-| XGBoost             | 0.956140 | 0.990829| 0.958333  | 0.971831 | 0.965035 | 0.906379 |
+| Logistic Regression | 0.988    | 0.997   | 0.988     | 0.988  | 0.988   | 0.974   |
+| Decision Tree       | 1.000    | 1.000   | 1.000     | 1.000  | 1.000   | 1.000   |
+| kNN                 | 0.981    | 0.998   | 0.981     | 0.981  | 0.981   | 0.959   |
+| Naive Bayes         | 0.940    | 0.989   | 0.940     | 0.940  | 0.940   | 0.872   |
+| Random Forest       | 1.000    | 1.000   | 1.000     | 1.000  | 1.000   | 1.000   |
+| XGBoost             | 1.000    | 1.000   | 1.000     | 1.000  | 1.000   | 1.000   |
 ## Observations
 
-- Logistic Regression: Achieved the highest AUC score, showing strong separability between classes.  
-- Decision Tree: Accuracy was lower compared to other models, likely due to overfitting.  
-- kNN: Balanced precision and recall, but slightly weaker MCC than ensemble methods.  
-- Naive Bayes: Very high AUC and recall, making it effective for detecting positive cases.  
-- Random Forest: Consistently strong across all metrics, robust performance with low variance.  
-- XGBoost: Competitive results, slightly lower MCC than Random Forest but still reliable.  
+- Logistic Regression: Very strong performance with high accuracy and AUC, showing excellent separability between malignant and benign cases.
+- Decision Tree: Achieved perfect scores, but this may indicate overfitting; performance could vary on unseen data.
+- kNN: Solid results with balanced metrics, though slightly lower MCC compared to ensemble methods.
+- Naive Bayes: Weaker performance relative to others, but still reasonable; Gaussian assumption may not fully fit the dataset.
+- Random Forest: Perfect scores across all metrics, robust and reliable due to ensemble averaging.
+- XGBoost: Also achieved perfect scores, demonstrating strong generalization and competitive performance with Random Forest.
 
 ## Streamlit App
 The app allows:
@@ -55,4 +58,14 @@ The app allows:
 
 ## Deployment
 Deployed on Streamlit Community Cloud.  
-Link: [Insert your Streamlit app link here]
+Link: https://mlassignment2-rppkkdfeqz8ekdcmygh9kk.streamlit.app/
+
+## Running Locally
+- Clone the repository:
+git clone https://github.com/ashishg9453/ml_assignment_2
+
+- Install dependencies:
+pip install -r requirements.txt
+
+- Run the app:
+streamlit run app.py
